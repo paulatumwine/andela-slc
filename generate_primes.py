@@ -2,7 +2,29 @@ import unittest
 
 
 def generate_primes(number):
-    pass
+    number_types = (int, float, complex)
+
+    if not isinstance(number, number_types):
+        raise ValueError
+
+    i = 1
+    factors = 0
+    primes = []
+    while i < number:
+
+        j = 1
+        while j <= i:
+            if i % j == 0 and (j != 1 or j != number):
+                factors += 1
+            j += 1
+
+        if factors == 2:
+            primes.append(i)
+
+        i += 1
+        factors = 0
+
+    return primes
 
 
 class TestGeneratePrimes(unittest.TestCase):
