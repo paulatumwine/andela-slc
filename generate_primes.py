@@ -1,6 +1,10 @@
 import unittest
 
 
+def generate_primes(number):
+    pass
+
+
 class TestGeneratePrimes(unittest.TestCase):
     def setUp(self):
         pass
