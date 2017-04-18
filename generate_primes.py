@@ -2,6 +2,13 @@ import unittest
 
 
 def generate_primes(number):
+	"""
+	A function to generate prime numbers from 0 to number
+	
+	This function has a worst case runtime of O(n2) because 
+	i has to get to number for the function to terminate
+	"""
+	
     number_types = (int, float, complex)
 
     if not isinstance(number, number_types):
